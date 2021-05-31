@@ -97,7 +97,7 @@ void ANetCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (Role == ROLE_Authority)
+	if (this->GetRemoteRole() == ROLE_Authority)
 	{
 		static float UpdateTime = 0;
 		UpdateTime += DeltaTime;
